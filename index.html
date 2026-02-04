@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen Marketing | Elevate Your Brand</title>
+    <meta name="description" content="A premium digital marketing agency driving growth through innovation.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NexGen.</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Marketing for the <br><span class="gradient-text">Digital Age</span></h1>
+                <p class="fade-in delay-100">We help ambitious brands scale with data-driven strategies and world-class creative.</p>
+                <div class="hero-actions fade-in delay-200">
+                    <button class="cta-btn">Start Project</button>
+                    <button class="outline-btn">View Work</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="section-title fade-in">Our Expertise</h2>
+            <div class="grid">
+                <div class="card fade-in delay-100">
+                    <i data-lucide="bar-chart-2" color="#00C6FF" size="48" style="margin-bottom: 1rem;"></i>
+                    <h3>SEO & Analytics</h3>
+                    <p>Dominate search results and understand your audience with advanced analytics integration.</p>
+                </div>
+                <div class="card fade-in delay-200">
+                    <i data-lucide="zap" color="#FF0080" size="48" style="margin-bottom: 1rem;"></i>
+                    <h3>Performance Marketing</h3>
+                    <p>High-ROI campaigns across Meta, Google, and TikTok that drive real conversions.</p>
+                </div>
+                <div class="card fade-in delay-300">
+                    <i data-lucide="pen-tool" color="#7928CA" size="48" style="margin-bottom: 1rem;"></i>
+                    <h3>Creative Strategy</h3>
+                    <p>Compelling visual storytelling that builds brand equity and engages users.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="nav-container" style="display: flex; gap: 4rem; align-items: center; justify-content: center;">
+             <div>
+                 <h2 style="font-size: 3rem; font-weight: 700;">200+</h2>
+                 <p style="opacity: 0.7;">Clients Scaled</p>
+             </div>
+             <div>
+                 <h2 style="font-size: 3rem; font-weight: 700;">$50M</h2>
+                 <p style="opacity: 0.7;">Revenue Generated</p>
+             </div>
+             <div>
+                 <h2 style="font-size: 3rem; font-weight: 700;">15+</h2>
+                 <p style="opacity: 0.7;">Awards Won</p>
+             </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NexGen Marketing Agency. Crafted with precision.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Simple intersection observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
